@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <html ng-app="myapp">
+    <head>
+        <meta charset="utf-8">
+        <base href="/projects/angular/demo-site/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>AngularJS Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+        <!-- bootstrap -->
+       <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="custom.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+     
+    </head>
+    
+<body class="ng-cloak">		
+        <div class="container">
+			<img ng-srcset="{{URLS.baseurl}}img/logo_giis.jpg" src="{{URLS.baseurl}}img/logo_giis.jpg" width="100%" height="100px">
+            <!--<div class="navbar" ng-controller="LoginLogoutController">
+                <div class="navbar-inner">
+                    <a href="base" class="brand">Home</a>
+                    <ul class="nav">
+                        <li><a href="posts">Posts</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav" style="float:right">
+                        <li><a href="registration" ng-if="!USER_AUTH.id">New Registration</a></li>
+                        <li><a ng-href="#" ng-click="logout()" ng-show="USER_AUTH.id">Logout</a></li>
+                        <li><a ng-href="base" ng-if="!USER_AUTH.id">Login</a></li>
+                    </ul>
+                </div>
+            </div>-->
+            
+			<nav class="navbar navbar-default" ng-controller="LoginLogoutController">
+               
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li><a href="base" activenav>Home</a></li>
+                    <li><a href="about" activenav>About</a></li>
+                    <li><a href="posts" activenav>Post</a></li>
+                    <!--<li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="posts" activenav>Post <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a ng-href="#">Default Menu</a></li>
+                        <li><a href="#">Default Menu</a></li>
+                        <li><a href="#">Default Menu</a></li>
+                      </ul>
+                    </li>-->
+                    <li><a href="contact" activenav>Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="registration" activenav ng-if="!USER_AUTH.id"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="{{URLS.baseurl}}" activenav ng-if="!USER_AUTH.id"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li class="dropdown" ng-show="USER_AUTH.id" >
+                        <a class="dropdown-toggle" data-toggle="dropdown" ng-show="USER_AUTH.name" >
+                        Welcome, {{USER_AUTH.name}} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" ng-controller="UserProfileController">
+                        	<li><a href="profile" activenav ng-click="getuserprofile()"><span class="glyphicon glyphicon-pencil"></span> Edit Profile</a></li>
+                            <li><a href="#" activenav ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>    
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+            	
+            </nav>
+            <!-- placeholder for views -->
+
+        </div>
+        
+        <!-- Animation Ex 1 for dispalying view -->
+		<!--<div ng-view="" class="container toggle main-content" ng-animate="{enter: 'ng-enter', leave: 'ng-hide'}">
+        </div>-->
+         <!-- Animation Ex 1 for dispalying view -->
+         
+        <!-- Animation Ex 2 for dispalying view -->
+        <div class="container  main-content">
+            <div ng-view="" class="view-animation" style="position:relative">
+            </div>
+        </div>
+        <!-- Animation Ex 2 for dispalying view -->
+        
+        <div class="container footer" ng-controller="OnlineUsers">
+        	<div class="row">
+            	<div class="col-sm-8">Copyright &copy; Global Indian International School</div>
+                <div class="col-sm-4 col-md-4 col-lg-4">{{totalViewers}} viewers are viewing</div>
+            </div>
+        </div>
+             
+        <!-- jquery/angular -->
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/myjs.js"></script>
+        <!-- this Project is working in both versions 1.4.10 and 1.5.3 -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-animate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-messages.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-cookies.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.min.js"></script>
+        <!-- Firebase Script -->
+        <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <!-- Firebase Script -->
+        <!-- Pagination Script-->
+        <script type="text/javascript" src="ng-simplePagination/simplePagination.js"></script>
+        <!-- Pagination Script-->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-messages.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-cookies.min.js"></script>-->
+         
+        <!-- app javascript -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+		
+    </body>
+</html>

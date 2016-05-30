@@ -1,0 +1,37 @@
+<div id="index" class="row" ng-controller="LoginLogoutController">
+    <div class="col-sm-8 col-md-8 col-lg-8">	
+        <h2 ng-bind="header"></h2>
+        <!--<p ng-show="USER_AUTH.id">User Id  = {{USER_AUTH.id}} </p>-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat pretium urna eget gravida. Vestibulum ornare, eros ac luctus dignissim, sem tellus varius orci, sed porta lorem est vitae eros. Proin ornare venenatis facilisis. Nullam suscipit cursus tortor, sit amet malesuada urna egestas at. Aliquam tincidunt mauris tellus. Nulla tincidunt, arcu sed viverra pharetra, ante ipsum pretium odio, ac pulvinar justo magna aliquam lorem. Praesent euismod auctor est quis imperdiet. Morbi a interdum neque. Integer facilisis aliquet leo, non sodales nibh eleifend ac. Donec risus tellus, porttitor sit amet gravida non, ullamcorper in velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat pretium urna eget gravida. Vestibulum ornare, eros ac luctus dignissim, sem tellus varius orci, sed porta lorem est vitae eros. Proin ornare venenatis facilisis. Nullam suscipit cursus tortor, sit amet malesuada urna egestas at. Aliquam tincidunt mauris tellus. Nulla tincidunt, arcu sed viverra pharetra, ante ipsum pretium odio, ac pulvinar justo magna aliquam lorem. Praesent euismod auctor est quis imperdiet. Morbi a interdum neque. Integer facilisis aliquet leo, non sodales nibh eleifend ac. Donec risus tellus, porttitor sit amet gravida non, ullamcorper in velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.</p>
+        <!--<h4>BaseURL = {{URLS.baseurl}}</h4>
+        <br />-->
+    </div>
+	<div class="col-sm-4 col-md-4 col-lg-4">	
+        <h2>User Login</h2>
+        <div class="form-group">
+        <form name="userlogin" id="userlogin"  ng-submit="login()">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="email" class="form-control" name="username" ng-model="user.username" required="required"/>
+                <span class="error" ng-show="errorusername">*&nbsp;{{errorusername}}</span><!-- this is for php name validation error -->
+            </div>
+            <div class="form-group">
+            <label>password</label>
+            <input type="password" class="form-control" name="password" ng-model="user.password"  required="required"/>
+            </div>
+            <div class="form-group">
+            <input type="submit" value="Sign In" />
+            </div>
+        </form>
+        </div>
+        <p ng-show="msg.success" class="success"><span class="glyphicon glyphicon-ok-circle gi-1x"></span> {{msg.success}}</p>
+        <p ng-show="msg.failure" class="error">{{msg.failure}}</p>
+        <p ng-show="USER_AUTH.msg" class="success"><span class="glyphicon glyphicon-ok-circle gi-1x"></span> {{USER_AUTH.msg}} </p>
+    </div>   
+    
+</div>
+
+<!--<div class="row">
+<div class="col-sm-12" ng-include="'views/contact.php'"></div>
+</div>-->
