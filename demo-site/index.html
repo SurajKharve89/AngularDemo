@@ -11,8 +11,9 @@
         
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
         <!-- bootstrap -->
-       <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">-->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       
+        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="custom.css" />
         <link rel="stylesheet" type="text/css" href="style.css" />
      
@@ -36,7 +37,6 @@
                     </ul>
                 </div>
             </div>-->
-            
 			<nav class="navbar navbar-default" ng-controller="LoginLogoutController">
                
                 <div class="navbar-header">
@@ -76,7 +76,7 @@
                     </li>
                   </ul>
                 </div>
-            	
+
             </nav>
             <!-- placeholder for views -->
 
@@ -85,14 +85,14 @@
         <!-- Animation Ex 1 for dispalying view -->
 		<!--<div ng-view="" class="container toggle main-content" ng-animate="{enter: 'ng-enter', leave: 'ng-hide'}">
         </div>-->
-         <!-- Animation Ex 1 for dispalying view -->
-         
+        <!-- Animation Ex 1 for dispalying view End--> 
         <!-- Animation Ex 2 for dispalying view -->
         <div class="container  main-content">
+
             <div ng-view="" class="view-animation" style="position:relative">
             </div>
         </div>
-        <!-- Animation Ex 2 for dispalying view -->
+        <!-- Animation Ex 2 for dispalying view End-->
         
         <div class="container footer" ng-controller="OnlineUsers">
         	<div class="row">
@@ -100,27 +100,48 @@
                 <div class="col-sm-4 col-md-4 col-lg-4">{{totalViewers}} viewers are viewing</div>
             </div>
         </div>
-             
+
         <!-- jquery/angular -->
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+
+        <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
         <script type="text/javascript" src="js/myjs.js"></script>
         <!-- this Project is working in both versions 1.4.10 and 1.5.3 -->
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-route.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-animate.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-messages.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-cookies.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular.min.js"></script>-->
+        <script src="angular-1.4.10/angular.min.js"></script>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-route.min.js"></script>-->
+        <script src="angular-1.4.10/angular-route.min.js"></script>
+
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-animate.min.js"></script>-->
+        <script src="angular-1.4.10/angular-animate.min.js"></script>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-messages.min.js"></script>-->
+        <script src="angular-1.4.10/angular-messages.min.js"></script>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.10/angular-cookies.min.js"></script>-->
+        <script src="angular-1.4.10/angular-cookies.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload-shim.min.js"></script>-->
+        <script src="ng-file-upload-12.0.4/ng-file-upload-shim.min.js"></script>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.min.js"></script>-->
+        <script src="ng-file-upload-12.0.4/ng-file-upload.min.js"></script>
+
         <!-- Firebase Script -->
         <script src="https://cdn.firebase.com/v0/firebase.js"></script>
         <!-- Firebase Script -->
+
         <!-- Pagination Script-->
         <script type="text/javascript" src="ng-simplePagination/simplePagination.js"></script>
         <!-- Pagination Script-->
+
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
